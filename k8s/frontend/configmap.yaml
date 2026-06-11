@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+  namespace: demo
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+data:
+  APP_ENV: "production"
+  BACKEND_API_URL: "http://backend.demo.svc.cluster.local"
